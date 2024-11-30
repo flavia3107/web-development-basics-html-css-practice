@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: rgb(244, 234, 255);
 }
 
@@ -10,7 +10,6 @@ h1 {
 
 header {
   text-align: center;
-  padding: 32px;
 }
 
 header img {
@@ -38,7 +37,7 @@ li {
   border-left: 5px solid transparent;
 }
 
-a {
+a:not(.logo) {
   text-decoration: none;
   color: rgb(36, 3, 102);
   background-color: rgb(255, 237, 177);
@@ -46,8 +45,8 @@ a {
   border-radius: 4px;
 }
 
-a:hover,
-a:active {
+a:not(.logo):hover,
+a:not(.logo):active {
   background-color: rgb(250, 201, 39);
 }
 
@@ -80,4 +79,48 @@ footer a:active {
 
 .highlight {
   font-weight: bold;
+}
+
+.logo {
+  text-decoration: none;
+  width: 10rem;
+  display: flex;
+  padding: 1rem 0 0 1rem;
+}
+
+.logo > img {
+  height: 35px;
+}
+
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  color: #272727;
+  align-items: flex-start;
+}
+
+.logo-img {
+  width: 2rem;
+  margin-right: 3px;
+}
+
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+}
+
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-top: 2px;
+  color: #272727;
+}
+
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.85rem;
 }
